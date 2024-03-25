@@ -6,6 +6,6 @@ import { DbModule } from '@/common/db/db.module';
 @Module({
   imports: [DbModule],
   providers: [ReviewsService],
-  controllers: [ReviewsController]
+  controllers: [ReviewsController],
 })
 export class ReviewsModule {}

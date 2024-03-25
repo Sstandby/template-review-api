@@ -1,4 +1,11 @@
-import { IsInt, IsNotEmpty, IsOptional, IsString, Max, Min } from 'class-validator';
+import {
+  IsInt,
+  IsNotEmpty,
+  IsOptional,
+  IsString,
+  Max,
+  Min,
+} from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class ReviewInput {
@@ -7,7 +14,9 @@ export class ReviewInput {
   @IsOptional()
   title?: string;
 
-  @ApiProperty({ description: 'Rating of the review (must be an integer between 1 and 5)' })
+  @ApiProperty({
+    description: 'Rating of the review (must be an integer between 1 and 5)',
+  })
   @IsInt()
   @IsNotEmpty()
   @Min(1)

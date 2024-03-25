@@ -44,7 +44,9 @@ export class ProductsService {
   async createCompany(name: string) {
     const company = await this.getByCompany(name);
     if (company) {
-      throw new BadRequestException('This company exists, please use another name.');
+      throw new BadRequestException(
+        'This company exists, please use another name.',
+      );
     }
 
     return this.db.company.create({
