@@ -22,7 +22,7 @@
     "prisma:debug": "prisma db push",
     "prisma:dev": "prisma migrate dev --name",
     "prisma:deploy": "prisma migrate deploy",
-    "start:migrate:prod": "npm run prisma:deploy && npm run start"
+    "start:migrate:prod": "npm run prisma:deploy && npm run start:prod"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
